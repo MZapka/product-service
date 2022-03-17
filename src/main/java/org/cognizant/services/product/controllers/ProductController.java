@@ -3,6 +3,7 @@ package org.cognizant.services.product.controllers;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,6 +18,7 @@ import org.cognizant.services.product.services.ProductService;
 @RequestMapping("products")	//localhost:8088/products
 public class ProductController {
 
+	@Autowired
 	private ProductService productService;
 
 	public ProductController(ProductService productService) {
